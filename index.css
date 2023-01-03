@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,9 +7,11 @@
 
 .master-div {
     display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     background-color: black;
+    flex-basis: 0;
     background-size: 50%;
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -21,17 +25,26 @@
 }
 
 .college-logo {
-    width: 150px;
-    height: 100px;
     padding-top: 10px;
     padding-left: 10px;
+    opacity: 0.7;
+}
+
+.content-text {
+    color: white;
+    font-family: 'Lustria', serif;
+    font-size: xx-large;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 800;
+    opacity: 0.8;
 }
 
 
-
-
-
-
+.logo-div {
+    display: flex;
+}
 
 @media only screen and (max-width: 600px) {
     .master-div {
@@ -41,10 +54,33 @@
         width: 100px;
         height: 75px;
     }
+
+    .para-div {
+        align-self: flex-start;
+        margin-top: 50px;
+        line-height: 1.5;
+    }
+
+    .para-div p {
+        font-size: x-large;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     .master-div {
         background-size: 50%;
     }
+
+    .college-logo {
+        width: 150px;
+        height: 100px;
+    }
+
+    .para-div {
+        align-self: flex-start;
+        margin-top: 50px;
+        width: 800px;
+        line-height: 1.5;
+    }
+    
 }
