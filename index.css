@@ -1,0 +1,28 @@
+.master-div {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-size: 50%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+        to left, 
+        transparent,
+        rgba(0, 0, 0, 0.5) 10%,
+        #000 100%
+    ), 
+        url(Jarvis.png
+    );
+}
+
+@media only screen and (max-width: 600px) {
+    .master-div {
+        background-size: 80%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .master-div {
+        background-size: 50%;
+    }
+}
