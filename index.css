@@ -92,6 +92,10 @@
     .para-div p {
         font-size: x-large;
     }
+
+    .c-checkbox:checked + .c-formContainer .c-form {
+        width: 30.5em;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -114,6 +118,10 @@
         width: 800px;
         line-height: 1.5;
         align-self: center;
+    }
+
+    .c-checkbox:checked + .c-formContainer .c-form {
+        width: 37.5em;
     }
     
 }

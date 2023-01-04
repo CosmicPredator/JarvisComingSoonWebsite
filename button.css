@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   font-size: 10px;
-  font-family: Roboto, sans-serif;
+  font-family: 'Lustria', serif;
   background-color: black;
   margin: 0;
   display: grid;
@@ -11,9 +11,7 @@ body {
 .c-checkbox {
   display: none;
 }
-.c-checkbox:checked + .c-formContainer .c-form {
-  width: 37.5em;
-}
+
 .c-checkbox:checked + .c-formContainer .c-form__toggle {
   visibility: hidden;
   opacity: 0;
