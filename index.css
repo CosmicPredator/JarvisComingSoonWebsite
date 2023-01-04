@@ -58,13 +58,13 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 630px) {
     .master-div {
         background-size: 80%;
     }
     .college-logo {
-        width: 250px;
-        height: 55px;
+        width: 200px;
+        height: 50px;
         padding-top: 7px;
     }
 
@@ -75,8 +75,8 @@
     }
 
     .mct-logo {
-        width: 150px;
-        height: 50px;
+        width: 120px;
+        height: 40px;
     }
 
     .para-div p {
