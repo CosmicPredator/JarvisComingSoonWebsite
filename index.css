@@ -42,8 +42,8 @@
 }
 
 .button-div {
-    margin-top: 50px;
     align-self: center;
+    margin-top: 30px;
 }
 
 
@@ -55,6 +55,16 @@
 .mct-logo {
     padding-top: 10px;
     padding-right: 10px;
+}
+
+.jarvis-full-logo {
+    width: 10rem;
+    height: 10rem;
+}
+
+.jarvis-div {
+    align-self: center;
+    margin-top: 40px;
 }
 
 
