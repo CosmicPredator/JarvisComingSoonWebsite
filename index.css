@@ -27,7 +27,6 @@
 .college-logo {
     padding-top: 10px;
     padding-left: 10px;
-    opacity: 0.7;
     align-self: flex-start;
 }
 
@@ -50,21 +49,34 @@
 
 .logo-div {
     display: flex;
+    justify-content: space-between;
 }
+
+.mct-logo {
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
 
 @media only screen and (max-width: 600px) {
     .master-div {
         background-size: 80%;
     }
     .college-logo {
-        width: 100px;
-        height: 75px;
+        width: 250px;
+        height: 55px;
+        padding-top: 7px;
     }
 
     .para-div {
         margin-top: 50px;
         line-height: 1.5;
         align-self: center;
+    }
+
+    .mct-logo {
+        width: 150px;
+        height: 50px;
     }
 
     .para-div p {
@@ -78,9 +90,13 @@
     }
 
     .college-logo {
-        width: 150px;
-        height: 100px;
+        width: 300px;
+        height: 65px;
         
+    }
+    .mct-logo {
+        width: 170px;
+        height: 60px;
     }
 
     .para-div {
