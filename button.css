@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   font-size: 10px;
-  font-family: 'Lustria', serif;
+  font-family: 'Comfortaa', cursive;
   background-color: black;
   margin: 0;
   display: grid;
@@ -24,9 +24,11 @@ body {
   opacity: 1;
   transform: scale(1);
 }
+
 .c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before, .c-checkbox:checked + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle::before {
   content: "Thank You! 😊";
 }
+
 .c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle {
   pointer-events: none;
   cursor: default;
@@ -72,6 +74,7 @@ body {
   justify-content: center;
   
 }
+
 .c-form__toggle::before {
   font-size: 1.75em;
   content: attr(data-title);

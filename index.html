@@ -9,7 +9,15 @@
     <link rel="stylesheet" href="button.css" />
     <link rel="stylesheet" href="socialmedia.css">
     <script src="https://kit.fontawesome.com/303f47b3be.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Coming Soon...!</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('QN7sDQGMwJb3AHw54');
+        })();
+    </script>
 </head>
 
 <body>
@@ -23,7 +31,7 @@
             </div>
         </div>
         <div class="jarvis-div">
-            <img src="jarvis-logo.png" class="jarvis-full-logo"/>
+            <img src="jarvis-logo.png" class="jarvis-full-logo" />
         </div>
         <div class="para-div">
             <p class="content-text">
@@ -33,25 +41,44 @@
         <div class="button-div">
             <input class="c-checkbox" type="checkbox" id="checkbox">
             <div class="c-formContainer">
-                <form class="c-form" action="">
+                <form class="c-form" id="contact-form" action="">
                     <input class="c-form__input" placeholder="E-mail" type="email"
                         pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
                     <label class="c-form__buttonLabel" for="checkbox">
-                        <button class="c-form__button" type="button">Send</button>
+                        <input class="c-form__button" value="submit" onclick="onClickA()" type="submit"></input>
                     </label>
                     <label class="c-form__toggle" for="checkbox" data-title="Notify me"></label>
                 </form>
+                <script type="text/javascript">
+                    function onClickA() {
+                        var formData = new FormData(document.getElementById('contact-form'));
+                        formData.append('service_id', 'service_uckbtcd');
+                        formData.append('template_id', 'template_fndgxf9');
+                        formData.append('user_id', 'QN7sDQGMwJb3AHw54');
+
+                        $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+                            type: 'POST',
+                            data: formData,
+                            contentType: false, // auto-detection
+                            processData: false // no need to parse formData to string
+                        }).done(function () {
+                            alert('Your contact details were sent Successfully, We will get in touch with you as soon as possible.');
+                        }).fail(function (error) {
+                            alert('Oops... ' + JSON.stringify(error));
+                        });
+                    }
+                </script>
             </div>
         </div>
         <div class="social-media-div">
             <div class="social-menu">
                 <ul>
-                    <li><a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-facebook"></i></i></a>
+                    <!-- <li><a href="https://github.com/sanketbodke" target="blank"><i class="fab fa-facebook"></i></i></a>
+                    </li> -->
+                    <li><a href="https://instagram.com/cit_jarvis" target="blank"><i class="fab fa-instagram"></i></a>
                     </li>
-                    <li><a href="https://instagram.com/cit_jarvis" target="blank"><i
-                                class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://www.youtube.com/@CITJARVIS" target="blank"><i
-                                class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.youtube.com/@CITJARVIS" target="blank"><i class="fab fa-youtube"></i></a>
+                    </li>
                 </ul>
             </div>
             </p>
